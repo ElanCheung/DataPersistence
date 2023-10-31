@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">DataPersistence</string>
+    <string name="app_name">DataStorage</string>
+    <string name="go_back">Go Back</string>
+    <string name="go_back1">Go Back</string>
 </resources>

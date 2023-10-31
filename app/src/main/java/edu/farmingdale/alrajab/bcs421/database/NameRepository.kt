@@ -38,11 +38,17 @@ class NameRepository private constructor(context: Context) {
 
     fun getUser(id: Long): User? = usrDao.getUser(id)
 
+    fun findByName(fname: String, lname: String): User? {
+        return usrDao.findByName(fname, lname)
+    }
+
     fun getAll(): List<User> = usrDao.getAll()
 
     fun addUser(usr: User) {
         usrDao.addUser(usr)
     }
+
+    fun updateUser(usr: User) = usrDao.update(usr)
 
     fun deleteUser(usr: User) = usrDao.delete(usr)
 

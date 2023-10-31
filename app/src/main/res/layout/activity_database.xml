@@ -2,22 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".database.DatabaseActivity">
 
-    <Button
-        android:id="@+id/read_data"
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Read data" />
+        android:id="@+id/enter_first"
+        android:hint="Enter First Name"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/black" />
+
+    <EditText
+        android:id="@+id/enter_last"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter Last Name" />
 
     <Button
         android:id="@+id/write_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text="Write data" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/black"/>
+
+    <Button
+        android:id="@+id/read_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read data" />
+
+
 </LinearLayout>

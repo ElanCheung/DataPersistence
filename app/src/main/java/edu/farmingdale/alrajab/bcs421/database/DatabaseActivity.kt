@@ -1,6 +1,7 @@
 package edu.farmingdale.alrajab.bcs421.database
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -30,13 +31,19 @@ class DatabaseActivity : AppCompatActivity() {
     }
 
     private fun writeData() {
-        dbHelper.addUser(User("Course "+Random.nextInt(6000),
-            "CSC "+Random.nextInt(6000)))
-
+//        dbHelper.addUser(User("Course "+Random.nextInt(6000),
+//            "CSC "+Random.nextInt(6000)))
+        val firstName = binding.enterFirst.text.toString()
+        val lastName = binding.enterLast.text.toString()
+        dbHelper.addUser(User(firstName, lastName))
     }
 
     private fun readData() {
         dbHelper.getAll().forEach { Log.d("Data",it.firstName+" , "+ it.lastName) }
+        //Start intent and go to readdata activity
+        startActivity(
+            Intent(this,ReadData::class.java)
+        )
 
     }
 
